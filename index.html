@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Dash AR</title>
+    <title>Dash Mascot AR</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
-      body {
-        margin: 0;
-        background: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-      }
-      model-viewer {
-        width: 100%;
-        height: 100%;
+      body { margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #fff; }
+      button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+        background: #ff5722;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <model-viewer
-  id="arModel"
-  style="display: none"
-  src="Meshy_Merged_Animations_Dash.glb"
-  ios-src="Meshy_Merged_Animations_Dash.usdz"
-  ar
-  ar-modes="scene-viewer quick-look webxr"
-  ar-scale="fixed"
-  alt="Dash Cereal Mascot">
-</model-viewer>
 
-<button onclick="document.querySelector('#arModel').activateAR()">View in AR</button>
+    <model-viewer
+      id="arModel"
+      style="display: none"
+      src="Meshy_Merged_Animations_Dash.glb"
+      ios-src="Meshy_Merged_Animations_Dash.usdz"
+      ar
+      ar-modes="scene-viewer quick-look webxr"
+      ar-scale="fixed"
+      alt="Dash Mascot Model"
+      camera-controls>
+    </model-viewer>
+
+    <button onclick="document.querySelector('#arModel').activateAR()">View in AR</button>
 
   </body>
 </html>
