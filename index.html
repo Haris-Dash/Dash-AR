@@ -20,14 +20,18 @@
     </style>
   </head>
   <body>
-    <model-viewer 
-      src="Meshy_Merged_Animations_Dash.glb"
-      ios-src="Meshy_Merged_Animations_Dash.usdz"
-      ar
-      ar-modes="scene-viewer quick-look webxr"
-      auto-rotate
-      camera-controls
-      alt="Dash Cereal Mascot">
-    </model-viewer>
+    <model-viewer
+  id="arModel"
+  style="display: none"
+  src="Meshy_Merged_Animations_Dash.glb"
+  ios-src="Meshy_Merged_Animations_Dash.usdz"
+  ar
+  ar-modes="scene-viewer quick-look webxr"
+  ar-scale="fixed"
+  alt="Dash Cereal Mascot">
+</model-viewer>
+
+<button onclick="document.querySelector('#arModel').activateAR()">View in AR</button>
+
   </body>
 </html>
